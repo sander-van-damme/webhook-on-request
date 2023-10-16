@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Webhook on Request options</title>
+  <link rel="stylesheet" href="options.css">
+</head>
+
+<body>
+  <h1>Webhook on Request</h1>
+  Webhook on Request is set up using a JSON object.<br>
+  The keys of the object should represent the webhook's URL,
+  while the values should consist of a list of domain names that will activate the webhook when they are accessed.
+  
+  <h2>Configuration</h2>
+  <form>
+    <textarea id="config" name="config" rows="10"></textarea><br>
+    <input type="submit" value="Save" id="save">
+  </form>
+
+  <h2>Example configuration</h2>
+  <pre>
+  {
+    "https://mywebhook.example.com/webhook_1": [
+        "shop.example.com",
+        "store.example.com",
+        "sales.example.com"
+    ],
+    "https://mywebhook.example.com/webhook_2": [
+        "computer.example.com",
+        "phone.example.com",
+        "tablet.example.com"
+    ]
+  }
+  </pre>
+
+  <script src="options.js"></script>
+</body>
+
+</html>
